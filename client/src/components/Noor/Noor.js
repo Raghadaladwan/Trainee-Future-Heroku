@@ -35,7 +35,7 @@ class Student extends React.Component {
   // ___________________________ Read__________________
 
   componentDidMount() {
-    axios.get("http://localhost:9000/data").then(({ data }) => {
+    axios.get("/data").then(({ data }) => {
       // console.log(data)
       this.setState({
         companies: data
@@ -55,7 +55,7 @@ class Student extends React.Component {
     img_path
   ) => {
     axios
-      .post(`http://localhost:9000/add`, {
+      .post(`/add`, {
         name,
         email,
         website,

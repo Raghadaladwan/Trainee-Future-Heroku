@@ -23,7 +23,7 @@ export default class login extends Component {
   check = async e => {
     e.preventDefault();
     await axios
-      .post("http://localhost:9000/login", {
+      .post("/login", {
         email: this.state.email,
         password: this.state.password
       })

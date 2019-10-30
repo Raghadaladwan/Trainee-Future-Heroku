@@ -30,7 +30,7 @@ class App extends React.Component {
 
     axios
       .delete(
-        `http://localhost:9000/deletePost/${this.state.company._id}/${_ID}`
+        `/deletePost/${this.state.company._id}/${_ID}`
       )
       .then(({ data }) => {
         console.log("D", data);
@@ -44,11 +44,7 @@ class App extends React.Component {
       });
   };
 
-  // loginCompany = async company => {
-  //   console.log("company from app :", company);
-  //   await this.setState({ company: { ...company, isloged: true }},()=>{ console.log('MMMMMMMM',this.state.isloged)} );
-
-  // };
+ 
 
   loginCompany = company => {
     this.setState({ company: company, isloged: true });
@@ -78,7 +74,7 @@ class App extends React.Component {
   check = async e => {
     e.preventDefault();
     await axios
-      .post("http://localhost:9000/loginTrainee", {
+      .post("/loginTrainee", {
         email: this.state.email,
         password: this.state.password
       })

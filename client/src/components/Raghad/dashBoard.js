@@ -21,7 +21,7 @@ export default class Dashboard extends Component {
     // company_info.post[0].img_path=company_info.img_path;
     console.log(company_info)
     axios
-      .put("http://localhost:9000/addPost", company_info)
+      .put("/addPost", company_info)
       .then(({ data }) => {
         console.log('DATAAAAAAA: ', data)
         this.setState({ companies: data });

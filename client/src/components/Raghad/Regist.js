@@ -13,14 +13,14 @@ export default class Regist extends Component {
 
   addCompany = it => {
     console.log("it",it)
-    axios.post("http://localhost:9000/addComp",
+    axios.post("/addComp",
      { it }).then(array => {
       this.setState({ comp: array.data });
     });
   };
 
   addT = i => {
-    axios.post("http://localhost:9000/addT", { i }).then(arr => {
+    axios.post("/addT", { i }).then(arr => {
       this.setState({ trainee: arr.data });
     });
   };

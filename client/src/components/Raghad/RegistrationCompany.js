@@ -46,28 +46,11 @@ export default class RegisterCompany extends Component {
 
   addCompany = () => {
     this.props.addCompany(this.state);
-    // this.setState({
-    //   name: "",
-    //   email: "",
-    //   password: "",
-    //   website: "",
-    //   city: "",
-    //   location: "",
-    //   comp_description: "",
-    //   img_path: "ahmaaaaaaaaaaaaaaad",
-    //   field: "",
-    //   post: [
-    //     {
-    //       field: "",
-    //       job_description: ""
-    //     }
-    //   ]
-    // });
+   
   };
 
   render() {
     const { change, addCompany } = this;
-    // console.log("URL HERE", this.state.url);
     return (
       <div>
         <div>
